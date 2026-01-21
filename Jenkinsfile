@@ -3,7 +3,6 @@ pipeline {
 	tools {
 		nodejs 'NodeJS'
 	}
-		}
 	stages {
 		stage('Checkout Github'){
 			steps {
@@ -27,4 +26,6 @@ pipeline {
 			echo 'Build failed. Check logs.'
 		}
 	}
+   }
+ }
 }
