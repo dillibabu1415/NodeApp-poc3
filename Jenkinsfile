@@ -7,7 +7,7 @@ pipeline {
 	stages {
 		stage('Checkout Github'){
 			steps {
-				git branch: 'main', credentialsId: 'jen-doc-git', url: 'https://github.com/iQuantC/NodeApp.git'
+				git branch: 'main', credentialsId: 'jen-doc-git', url: 'https://github.com/dillibabu1415/NodeApp-poc3.git'
 			}
 		}		
 		stage('Install node dependencies'){
