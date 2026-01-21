@@ -18,6 +18,12 @@ pipeline {
 			steps {
 				sh 'npm test'
 			}
+		}
+		stage('Build Docker Image'){
+			steps {
+				sh 'docker.build("nodeimage"+"$BUILD_NUMBER")'	
+			}
+		}	
 			post {
 		success {
 			echo 'Build completed succesfully!'
@@ -26,6 +32,5 @@ pipeline {
 			echo 'Build failed. Check logs.'
 		}
 	}
-   }
  }
 }
